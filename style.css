@@ -1,20 +1,94 @@
 :root {
-    --coral: #F05D5E;
-    --teal: #0F7173;
-    --light: #E7ECEF;
-    --dark: #272932;
-    --camel: #D8A47F;
+  --coral: #f05d5e;
+  --teal: #0f7173;
+  --light: #e7ecef;
+  --dark: #272932;
+  --camel: #d8a47f;
+}
+
+html {
+  font-size: 100%;
 }
 
 body {
-    background-color: var(--light);
+  background-color: var(--light);
+}
+
+h1 {
+  font-size: 2.25rem;
+}
+
+p {
+  font-size: 0.75rem;
 }
 
 .card {
-    padding: 10px;
-    margin: 10px;
+  padding: 10px;
+  margin: 10px;
 }
 
 img {
-    width: 250px;
+  width: 250px;
+}
+
+.card-container {
+  width: 70%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.ipsum {
+  font-family: "Raleway", sans-serif;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+}
+
+@media only screen and (min-width: 400px) {
+  .ipsum {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 700px) {
+  html {
+    font-size: 120%;
+  }
+  body {
+    background-color: var(--teal);
+  }
+  .ipsum {
+    display: block;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  html {
+    font-size: 150%;
+  }
+  body {
+    background-color: var(--camel);
+  }
+  .ipsum {
+    display: block;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #333;
+    color: white;
+  }
+  a {
+    color: white;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  body {
+    background: white;
+    color: #555;
+  }
 }
